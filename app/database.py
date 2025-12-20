@@ -240,7 +240,7 @@ def dump_table_to_gcs(
     
     Args:
         table_key: Key in TABLE_REGISTRY
-        bucket_name: GCS bucket name (e.g., "wiley-data-exports")
+        bucket_name: GCS bucket name (e.g., "data-exports")
         page_number: Current page (1-indexed)
         total_pages: Total pages to divide table into
         safety_limit: Max rows per page

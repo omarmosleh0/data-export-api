@@ -1,0 +1,26 @@
+# Database
+SQLAlchemy==2.0.39
+pg8000==1.16.6
+
+# Environment & Config
+python-dotenv==0.15.0
+
+# Web Framework
+fastapi==0.109.0
+uvicorn==0.27.0
+
+# Authentication
+python-jose[cryptography]==3.4.0
+
+# Rate Limiting
+slowapi==0.1.5
+
+# Caching
+cachetools==5.5.0
+
+# HTTP Client (for JWKS fetching)
+requests==2.31.0
+
+#  GCS client library
+google-cloud-storage==2.14.0
+

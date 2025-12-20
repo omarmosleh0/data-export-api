@@ -14,7 +14,7 @@ from slowapi.errors import RateLimitExceeded
 logger = logging.getLogger(__name__)
 
 # --- CONFIG FROM ENVIRONMENT ---
-ISSUER = os.environ.get("JWT_ISSUER")  # e.g., "https://your-wiley.okta.com/oauth2/default"
+ISSUER = os.environ.get("JWT_ISSUER")  # e.g., "https://your-okta.com/oauth2/default"
 AUDIENCE = os.environ.get("JWT_AUDIENCE")  # e.g., "query-engine-api"
 JWKS_URL = f"{ISSUER}/v1/keys"  # Standard OpenID Connect JWKS endpoint
 

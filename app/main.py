@@ -18,8 +18,7 @@ from slowapi.middleware import SlowAPIMiddleware
 # Initialize the API App
 app = FastAPI(
     title="Query Execution Engine",
-    description="Production-grade data export API for Wiley big data systems",
-    version="2.0.0"
+    version="1.0.0"
 )
 logger = logging.getLogger("uvicorn")
 
@@ -87,7 +86,7 @@ async def health_check(request: Request):
 # Request model for GCS exports
 class GCSExportRequest(BaseModel):
     """Request model for GCS export."""
-    bucket_name: str = Field(..., description="GCS bucket name (e.g., 'wiley-data-exports')")
+    bucket_name: str = Field(..., description="GCS bucket name (e.g., 'data-exports')")
     page: int = Field(default=1, gt=0, description="Page number (1-indexed)")
     total_pages: int = Field(default=10, gt=0, le=500, description="Total pages (max 500)")
     folder_prefix: str = Field(default="exports", description="Folder prefix in bucket")
